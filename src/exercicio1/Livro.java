@@ -7,15 +7,13 @@ public class Livro {
     private int anoPublicacao;
     private boolean emprestado;
 
-    // Construtor padrão
-    public Livro() {
+      public Livro() {
         this.titulo = "";
         this.autor = "";
         this.anoPublicacao = 0;
         this.emprestado = false;
     }
 
-    // Construtor com parâmetros
     public Livro(String titulo, String autor, int anoPublicacao, boolean emprestado) {
         this.titulo = titulo;
         this.autor = autor;
@@ -23,7 +21,6 @@ public class Livro {
         this.emprestado = emprestado;
     }
 
-    // Getters e Setters
     public String getTitulo() {
         return titulo;
     }
@@ -56,20 +53,17 @@ public class Livro {
         this.emprestado = emprestado;
     }
 
-    // Método toString()
     @Override
     public String toString() {
         return "Livro [titulo=" + titulo + ", autor=" + autor + ", anoPublicacao=" + anoPublicacao
                 + ", emprestado=" + emprestado + "]";
     }
 
-    // Método hashCode()
     @Override
     public int hashCode() {
         return java.util.Objects.hash(titulo, autor, anoPublicacao, emprestado);
     }
 
-    // Método equals()
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -83,7 +77,6 @@ public class Livro {
                 emprestado == other.emprestado;
     }
 
-    // Outro método para alterar o status de empréstimo do livro
     public void alterarStatusEmprestimo() {
         this.emprestado = !this.emprestado;
     }
